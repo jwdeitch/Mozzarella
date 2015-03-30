@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'Proposal_submissions@index');
+Route::get('/new', 'Proposal_submissions@newprop');
+
 
 Route::get('home', 'HomeController@index');
 

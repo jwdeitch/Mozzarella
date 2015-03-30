@@ -21,6 +21,7 @@ class CreateProposalsTable extends Migration {
             $table->string('status')->nullable();
             $table->integer('item_id')->nullable();
             $table->text('user_note')->nullable();
+            $table->text('unit_id')->nullable();
             $table->text('admin_note')->nullable();
             $table->integer('quantity')->nullable();
             $table->string('exp_date')->nullable();
