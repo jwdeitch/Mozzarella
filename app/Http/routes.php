@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', 'Proposal_submissions@index');
-Route::get('/new', 'Proposal_submissions@newprop');
-
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/', 'Proposal_submissions@index');
+    Route::get('/new', 'Proposal_submissions@newprop');
+});
 
 Route::get('home', 'HomeController@index');
 
