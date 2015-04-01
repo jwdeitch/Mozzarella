@@ -14,8 +14,8 @@ class Proposal_submissions extends Controller {
 
 	public function index() {
 
-
-        return view('index');
+        $props = Proposal::all();
+        return view('index', compact('props'));
     }
 
     public function newprop() {
@@ -32,6 +32,7 @@ class Proposal_submissions extends Controller {
         $proposal->status = 'Pending...';
 
         $proposal->user_id = Auth::id();
+
         $proposal->exp_date = $request->get('date');
         $proposal->user_note = $request->get('usr_notes');
         $proposal->admin_note = null;
