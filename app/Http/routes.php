@@ -1,5 +1,5 @@
 <?php
-
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,8 +12,13 @@
 */
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', 'Proposal_submissions@index');
+    Route::get('/', array('as' => 'index', 'uses' => 'Proposal_submissions@index'));
     Route::get('/new', 'Proposal_submissions@newprop');
+    Route::get('/test', function () {
+        return Auth::id();
+    });
+    Route::post('/new', 'Proposal_submissions@newproppost');
+
 });
 
 Route::get('home', 'HomeController@index');
