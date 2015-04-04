@@ -24,7 +24,7 @@ class CreateProposalsTable extends Migration {
             $table->text('unit_id')->nullable();
             $table->text('admin_note')->nullable();
             $table->integer('quantity')->nullable();
-            $table->date('exp_date')->nullable();
+            $table->timestamp('exp_date')->nullable();
             $table->string('receive_date')->nullable();
 
             $table->integer('user_id')->unsigned();

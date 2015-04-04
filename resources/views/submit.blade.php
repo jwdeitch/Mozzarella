@@ -11,12 +11,8 @@
     {!! Form::text('qnt',null,['class'=>'form-control']); !!}
     <br/>
     {!! Form::label('Expiration Date:'); !!}
-    {!! Form::text('date', 'date', ['class' => 'form-control','id'=>'datetimepicker4']) !!}
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker4').datetimepicker();
-        });
-    </script>
+    {!! Form::input('date', 'date',null, ['class' => 'form-control']) !!}
+
     <br/> <br/>
     {!! Form::label('notes:'); !!}
     <br/>
